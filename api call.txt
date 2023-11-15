@@ -1,0 +1,16 @@
+step1:open command prombt
+
+step 2:type--> npm install -g json-server 
+
+step 3: press enter
+
+step 4 : Go to src of this project--> single click the db.json file ---> go to filepath select all and type cmd  the command prombt is 
+
+step 5: type -->json-server  --watch db.json
+
+step 6: press enter
+
+step 7: Go to use this project and run this project
+
+
+            

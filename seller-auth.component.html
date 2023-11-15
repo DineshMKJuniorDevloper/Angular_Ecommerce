@@ -1,0 +1,39 @@
+<div class="seller-auth">
+
+    <div *ngIf="!showLogin" class="sign-up">
+        <h1>Seller Sign-up</h1>
+        <form #sellerSignUp="ngForm" (ngSubmit)="signUp(sellerSignUp.value)" class="common-form">
+            <p class="error-p">{{authError}}</p>
+            <input type="text"  class="form-input" placeholder="Enter UserName" name="name" ngModel name #name="ngModel" required  />
+            <p class="invalid-input"><span *ngIf="name.invalid && name.touched">Please Enter Valid name</span></p>
+
+            <input type="text"  class="form-input" placeholder="Enter Email" name="email" ngModel  email #email="ngModel" required />
+            <p class="invalid-input"><span *ngIf="email.invalid && email.touched">Please Enter Valid Email</span></p>
+
+            <input type="text"  class="form-input" placeholder="Enter Password" name="password" ngModel minlength="4" maxlength="8" #password="ngModel" required />
+            <p class="invalid-input"><span *ngIf="password.invalid && password.touched">Please Enter Valid Email</span></p>
+
+            <button  [disabled]="sellerSignUp.invalid" class="form-button">Sign Up</button>
+            <a class="auth-toggle-link" (click)="openLogin() ">Already have account? Click for Login</a>
+        </form>
+    </div>
+
+
+
+    <div *ngIf="showLogin" class="login">
+        <h1>Seller Login</h1>
+        <p class="error-p">{{authError}}</p>
+        <form #sellerLogin="ngForm" (ngSubmit)="login(sellerLogin.value)" class="common-form">
+          
+            <input type="text"  class="form-input" placeholder="Enter Email" name="email" ngModel email #email="ngModel" required />
+            <p class="invalid-input"><span *ngIf="email.invalid && email.touched">Please Enter Valid Email</span></p>
+
+            <input type="text"  class="form-input" placeholder="Enter Password" name="password" ngModel minlength="4" maxlength="8" #password="ngModel"  required />
+            <p class="invalid-input"><span *ngIf="password.invalid && password.touched">Please Enter Valid Email</span></p>
+
+            <button [disabled]="sellerLogin.invalid" class="form-button">login</button>
+            <a class="auth-toggle-link" (click)="openSignUp()">Don't have account? Click for Sign-Up</a>
+        </form>
+    </div>
+
+</div>

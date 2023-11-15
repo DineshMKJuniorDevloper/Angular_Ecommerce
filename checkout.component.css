@@ -1,0 +1,27 @@
+.checkout h1{
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+
+.checkout h3{
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+   
+}
+.message-p{
+    text-align: center;
+}
+.checkout .row .head{
+    color: blueviolet;
+}
+.checkout .first-head{
+    color:rgb(108, 11, 199);
+    text-decoration:underline;
+}
+.checkout h3 .price{
+    color: rgb(21, 241, 21);
+    font-size: 50px;
+}

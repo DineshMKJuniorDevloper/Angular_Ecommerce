@@ -1,0 +1,30 @@
+<div class="checkout">
+    <h1 class="first-head">
+        CheckOut
+    </h1>
+    <div class="row">
+        <div class="col-sm-7">
+            <h3 class="head">Add shipping address</h3>
+            <p class="message-p">{{orderMsg}}</p>
+
+            <form #orderData="ngForm" class="common-form" (ngSubmit)="orderNow(orderData.value)"  >
+             <p class="error-p">{{authError}}</p>
+            <input type="email" class="form-input" name="email" placeholder="Enter User Email" ngModel email  #email="ngModel" required/>
+            <p class="invalid-input"><span *ngIf="email.invalid && email.touched">Please Enter Valid Email</span></p>
+
+            <input type="text" class="form-input" name="address" placeholder="Enter User Addrss" ngModel address #address="ngModel" required />
+            <p class="invalid-input"><span *ngIf="address.invalid && address.touched">Please Enter Valid Address</span></p>
+
+            <input type="text" class="form-input" name="contact" placeholder="Enter contact Details" ngModel minlength="10" maxlength="10" #contact="ngModel" required />
+            <p class="invalid-input"><span *ngIf="contact.invalid && contact.touched">Please Enter Valid Phone Number</span></p>
+
+            <button [disabled]="orderData.invalid" class="form-button">Order Now</button>
+            </form>
+        </div>
+        <div class="col-sm 5">
+            <h3>Total Amount Rs:<h3 class="price">{{totalPrice}}</h3></h3>
+            <h4>Payment method: <b>Pay Cash on Delivary</b></h4>
+
+        </div>
+    </div>
+</div>

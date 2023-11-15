@@ -1,0 +1,35 @@
+<div class="add-product">
+    <h1 >Add New Product</h1>
+    <p class="message-p">{{addProductMessage}}</p>
+    
+    <form #addProduct ="ngForm" (ngSubmit)="submit(addProduct.value)" class="common-form">
+        <p class="error-p">{{authError}}</p>
+         
+        <input type="text"  class="form-input" placeholder="Enter Product Name" name="productname" ngModel productname #productname="ngModel" required />
+        <p class="invalid-input"><span *ngIf="productname.invalid && productname.touched">Please Enter ProductName</span></p>
+
+
+        <input type="text"  class="form-input" placeholder="Enter Product Price" name="price" ngModel price #price="ngModel" required />
+        <p class="invalid-input"><span *ngIf="price.invalid && price.touched">Please Enter ProductPrice</span></p>
+
+
+        <input type="text"  class="form-input" placeholder="Enter Product Category" name="category" ngModel category #category="ngModel" required />
+        <p class="invalid-input"><span *ngIf="category.invalid && category.touched">Please Enter ProductCategory</span></p>
+
+
+        <input type="text"  class="form-input" placeholder="Enter Product Color" name="Color" ngModel Color #Color="ngModel" required />
+        <p class="invalid-input"><span *ngIf="Color.invalid && Color.touched">Please Enter ProductColor</span></p>
+
+
+        <textarea type="text"  class="form-input" placeholder="Enter Product Discription" name="discription" ngModel discription #discription="ngModel" required ></textarea>
+        <p class="invalid-input"><span *ngIf="discription.invalid && discription.touched">Please Enter ProductDiscription</span></p>
+
+
+        <input type="text"  class="form-input" placeholder="Enter Product Image URL" name="image" ngModel image #image="ngModel" required />
+        <p class="invalid-input"><span *ngIf="image.invalid && image.touched">Please Enter ProductURL link</span></p>
+
+
+        <button [disabled]="addProduct.invalid" class="form-button">Add Product</button>
+
+    </form>
+</div>

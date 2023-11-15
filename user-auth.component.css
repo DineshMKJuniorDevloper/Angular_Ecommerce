@@ -1,0 +1,17 @@
+.user-auth h1, .login h1{
+    margin-top:  50px;
+    margin-bottom: 80px;
+    color: blueviolet;
+    text-align: center;
+}
+
+.user-auth {
+    margin-bottom: 100px;
+}
+.user-auth a{
+    color: rgb(170, 162, 177);
+    cursor: pointer;
+}
+.user-auth a:hover{
+     color:rgb(109, 15, 197);;
+}

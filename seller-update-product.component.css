@@ -1,0 +1,9 @@
+.update-product{
+    text-align: center;
+}
+
+.update-product h1{
+    margin-top:  50px;
+    margin-bottom: 30px;
+    color: blueviolet;
+}
